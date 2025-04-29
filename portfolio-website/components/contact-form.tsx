@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
-import { Loader2 } from "lucide-react"
+import { Loader2 } from 'lucide-react'
 
 export function ContactForm() {
   const { toast } = useToast()
@@ -21,9 +21,8 @@ export function ContactForm() {
     setTimeout(() => {
       setIsSubmitting(false)
 
-      toast({
-        title: "Message received!",
-        description: "Thank you for your message. I'll get back to you soon.",
+      toast.success("Message received!", {
+        description: "Thank you for your message. I'll get back to you soon."
       })
 
       // Reset form

@@ -1,11 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
 import type React from "react"
 import "@/app/globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter } from 'next/font/google'
 import { ThemeProvider } from "@/components/theme-provider"
+import { SonnerProvider } from "@/components/sonner-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -24,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
+          <SonnerProvider />
         </ThemeProvider>
       </body>
     </html>
