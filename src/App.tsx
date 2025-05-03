@@ -14,7 +14,7 @@ const App = () => (
     <Navbar />
     <main>
       <HeroSection />
-      <AboutSection />
+      <AboutSection portrait="/assets/portrait.jpg" />
       <SkillsSection />
       <ProjectsSection />
       <ServicesSection />

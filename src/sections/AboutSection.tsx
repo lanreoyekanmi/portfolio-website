@@ -1,6 +1,10 @@
 import React from 'react';
 
-const AboutSection = () => (
+interface AboutSectionProps {
+  portrait?: string;
+}
+
+const AboutSection: React.FC<AboutSectionProps> = ({ portrait }) => (
   <section id="about" className="py-24 px-4 md:px-0 flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-12">
     <div className="flex-1 text-center md:text-left">
       <span className="inline-block bg-portfolio-purple-dark/40 text-portfolio-purple px-4 py-1 rounded-full mb-4 font-medium text-sm backdrop-blur">About Me</span>
@@ -17,8 +21,12 @@ const AboutSection = () => (
       </div>
     </div>
     <div className="flex-1 flex items-center justify-center">
-      <div className="w-80 h-80 bg-gray-100/10 rounded-2xl flex items-center justify-center border-2 border-portfolio-purple-dark">
-        <span className="text-gray-400 text-5xl"> <svg xmlns='http://www.w3.org/2000/svg' className='w-16 h-16 mx-auto' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 4v16m8-8H4' /></svg> </span>
+      <div className="w-80 h-80 bg-gray-100/10 rounded-2xl flex items-center justify-center border-2 border-portfolio-purple-dark overflow-hidden">
+        {portrait ? (
+          <img src={portrait} alt="Portrait" className="object-cover w-full h-full" />
+        ) : (
+          <span className="text-gray-400 text-5xl"> <svg xmlns='http://www.w3.org/2000/svg' className='w-16 h-16 mx-auto' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 4v16m8-8H4' /></svg> </span>
+        )}
       </div>
     </div>
   </section>
