@@ -14,7 +14,7 @@ const HeroSection = () => (
       <a href="#projects" className="bg-portfolio-purple hover:bg-portfolio-purple-dark text-white px-6 py-3 rounded-lg font-semibold transition">View My Work &rarr;</a>
       <a href="#contact" className="border border-white hover:bg-white hover:text-portfolio-dark px-6 py-3 rounded-lg font-semibold transition">Contact Me</a>
     </div>
-    {/* Decorative particles or background can be added here */}
+    
   </section>
 );
 

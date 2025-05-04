@@ -13,7 +13,7 @@ const testimonials = [
   },
   {
     quote: 'Their ability to translate complex educational concepts into engaging digital experiences is remarkable. Our students love the interactive learning tools.',
-    name: 'Dr. Emily Rodriguez',
+    name: 'Prof. Olumorin B.C',
     role: 'University Professor',
   },
 ];
