@@ -1,7 +1,15 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 
 const HeroSection = () => (
-  <section id="hero" className="flex flex-col items-center justify-center min-h-screen pt-32 pb-16 text-center relative overflow-hidden bg-portfolio-light dark:bg-portfolio-dark">
+  <motion.section
+    id="hero"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ duration: 0.8, ease: 'easeOut' }}
+    className="flex flex-col items-center justify-center min-h-screen pt-32 pb-16 text-center relative overflow-hidden bg-portfolio-light dark:bg-portfolio-dark"
+  >
     <div className="max-w-5xl mx-auto px-6">
       {/* Decorative elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-portfolio-purple-100/50 dark:bg-portfolio-purple/5 rounded-full blur-3xl -z-10" />
@@ -67,7 +75,7 @@ const HeroSection = () => (
         <span className="tracking-wider">Scroll to explore</span>
       </div>
     </div>
-  </section>
+  </motion.section>
 );
 
 export default HeroSection; 

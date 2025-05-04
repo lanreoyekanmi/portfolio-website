@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 
 interface AboutSectionProps {
@@ -5,7 +6,14 @@ interface AboutSectionProps {
 }
 
 const AboutSection: React.FC<AboutSectionProps> = ({ portrait }) => (
-  <section id="about" className="py-24 px-4 md:px-0 flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-12">
+  <motion.section
+    id="about"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ duration: 0.8, ease: 'easeOut' }}
+    className="py-24 px-4 md:px-0 flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-12"
+  >
     <div className="flex-1 text-center md:text-left">
       <span className="inline-block bg-portfolio-purple-dark/40 text-portfolio-purple px-4 py-1 rounded-full mb-4 font-medium text-sm backdrop-blur">About Me</span>
       <h2 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Crafting digital experiences<br className="hidden md:block" /> with purpose</h2>
@@ -29,7 +37,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ portrait }) => (
         )}
       </div>
     </div>
-  </section>
+  </motion.section>
 );
 
 export default AboutSection; 

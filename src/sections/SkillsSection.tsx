@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 
 const skills = {
@@ -13,7 +14,14 @@ const SkillBadge = ({ children }: { children: React.ReactNode }) => (
 );
 
 const SkillsSection = () => (
-  <section id="skills" className="py-24 px-4 max-w-6xl mx-auto text-center">
+  <motion.section
+    id="skills"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ duration: 0.8, ease: 'easeOut' }}
+    className="py-24 px-4 max-w-6xl mx-auto text-center"
+  >
     <span className="inline-block bg-portfolio-purple-dark/40 text-portfolio-purple px-4 py-1 rounded-full mb-4 font-medium text-sm backdrop-blur">Skills</span>
     <h2 className="text-4xl md:text-5xl font-extrabold mb-4">My Skills</h2>
     <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
@@ -42,7 +50,7 @@ const SkillsSection = () => (
         </div>
       </div>
     </div>
-  </section>
+  </motion.section>
 );
 
 export default SkillsSection; 

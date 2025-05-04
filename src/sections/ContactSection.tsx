@@ -1,8 +1,16 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import SocialIcons from '../components/SocialIcons';
 
 const ContactSection = () => (
-  <section id="contact" className="py-24 px-4 max-w-6xl mx-auto text-center bg-portfolio-gray-50 dark:bg-portfolio-dark">
+  <motion.section
+    id="contact"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ duration: 0.8, ease: 'easeOut' }}
+    className="py-24 px-4 max-w-6xl mx-auto text-center bg-portfolio-gray-50 dark:bg-portfolio-dark"
+  >
     <span className="inline-block bg-portfolio-purple-100 dark:bg-portfolio-purple-dark/40 text-portfolio-purple-600 dark:text-portfolio-purple px-4 py-1.5 rounded-full mb-4 font-medium text-sm backdrop-blur-sm border border-portfolio-purple-200 dark:border-portfolio-purple/20">
       Contact
     </span>
@@ -87,7 +95,7 @@ const ContactSection = () => (
         </button>
       </form>
     </div>
-  </section>
+  </motion.section>
 );
 
 export default ContactSection; 
