@@ -8,21 +8,24 @@ import ServicesSection from './sections/ServicesSection';
 import TestimonialsSection from './sections/TestimonialsSection';
 import ContactSection from './sections/ContactSection';
 import Footer from './components/Footer';
+import { ThemeProvider } from './context/ThemeContext';
 
 const App = () => (
-  <div className="bg-portfolio-dark min-h-screen text-white">
-    <Navbar />
-    <main>
-      <HeroSection />
-      <AboutSection portrait="/assets/portrait.jpg" />
-      <SkillsSection />
-      <ProjectsSection />
-      <ServicesSection />
-      <TestimonialsSection />
-      <ContactSection />
-    </main>
-    <Footer />
-  </div>
+  <ThemeProvider>
+    <div className="min-h-screen bg-white dark:bg-portfolio-dark text-gray-900 dark:text-white transition-colors duration-200">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <AboutSection portrait="/assets/portrait.jpg" />
+        <SkillsSection />
+        <ProjectsSection />
+        <ServicesSection />
+        <TestimonialsSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </div>
+  </ThemeProvider>
 );
 
 export default App; 

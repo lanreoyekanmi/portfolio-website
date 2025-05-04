@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => (
   <nav className="w-full flex items-center justify-between px-8 py-4 bg-transparent fixed top-0 left-0 z-50">
@@ -15,6 +16,7 @@ const Navbar = () => (
       <li><a href="#contact" className="hover:text-portfolio-purple transition">Contact</a></li>
     </ul>
     <div className="flex items-center gap-4">
+      <ThemeToggle />
       <button className="bg-portfolio-purple text-white px-4 py-2 rounded-lg font-semibold hover:bg-portfolio-purple-dark transition">Hire Me</button>
     </div>
   </nav>
