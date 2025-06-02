@@ -8,7 +8,7 @@ const SocialIcons = ({ className = '' }: SocialIconsProps) => {
   return (
     <div className={`flex gap-4 ${className}`}>
       <a
-        href="https://www.linkedin.com/in/olanrewaju-oyekanmi-1b4553243/"
+        href="www.linkedin.com/in/olanrewaju-oyekanmi"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-400 hover:text-portfolio-purple transition-colors"
