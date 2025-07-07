@@ -9,10 +9,10 @@ const projects = [
     iframeUrl: ' https://lanreoyekanmi.github.io/academicjournal/', 
   },
   {
-    title: 'First Portfolio Website',
-    description: 'A fully responsive e-commerce platform with payment integration.',
+    title: 'Login and Sign Up Page',
+    description: 'A simple login and sign up page with form validation.',
     category: 'Web Development',
-    iframeUrl: 'https://lanrewajuoyekanmi.netlify.app/', 
+    iframeUrl: 'https://lanreoyekanmi.github.io/signup-login/login.html', 
   },
   {
     title: 'Techrity Sign Page',
@@ -21,10 +21,10 @@ const projects = [
     iframeUrl: 'https://techrity-auth.netlify.app/', 
   },
   {
-    title: 'Decorative Birthday card',
-    description: 'A fully responsive e-commerce platform with payment integration.',
+    title: 'Event Management System',
+    description: 'A full-stack event management system, that shows both past and present events.',
     category: 'Web Development',
-    iframeUrl: 'https://lanreoyekanmi.github.io/birthday-card/', 
+    iframeUrl: 'https://techrity.org/events', 
   },
 ];
 
