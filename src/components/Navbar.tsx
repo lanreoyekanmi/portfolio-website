@@ -17,7 +17,12 @@ const Navbar = () => (
     </ul>
     <div className="flex items-center gap-4">
       <ThemeToggle />
-      <button className="bg-portfolio-purple text-white px-4 py-2 rounded-lg font-semibold hover:bg-portfolio-purple-dark transition">Hire Me</button>
+      <a
+        href="mailto:lanrewajuoyekanmi@gmail.com"
+        className="bg-portfolio-purple text-white px-4 py-2 rounded-lg font-semibold hover:bg-portfolio-purple-dark transition"
+      >
+        Hire Me
+      </a>
     </div>
   </nav>
 );
