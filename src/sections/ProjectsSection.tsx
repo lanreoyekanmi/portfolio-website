@@ -62,7 +62,7 @@ const ProjectsSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {filtered.map((project, idx) => (
           <div key={project.title} className="bg-white/5 rounded-2xl p-6 flex flex-col items-start shadow-lg">
-            <div className="w-full h-96 bg-gray-100/10 rounded-xl overflow-hidden mb-4">
+            <div className="w-full h-56 sm:h-72 md:h-96 bg-gray-100/10 rounded-xl overflow-hidden mb-4">
               {project.iframeUrl ? (
                 <iframe
                   src={project.iframeUrl}
